@@ -25,22 +25,5 @@ class MediosSeeder extends Seeder
             'updated_at' => $horaActual,
         ]);
 
-        DB::table('medios')->insert([
-            'id_medios' => 2,
-            'nombre' => "banner_2.jpg",
-        'url' => "assets/imagen/banner/banner_2.jpg",
-            'id_tipos_medios' => 1,
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-        ]);
-
-        DB::table('medios')->insert([
-            'id_medios' => 3,
-            'nombre' => "banner_3.jpg",
-            'url' => "assets/imagen/banner/banner_3.jpg",
-            'id_tipos_medios' => 1,
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-        ]);
     }
 }

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('carousel', function (Blueprint $table) {
             $table->id('id_carousel');
             $table->string('nombre_carousel')->nullable();
+            $table->string('nombre_socio')->nullable();
             $table->string('url_carousel')->nullable();
             $table->timestamps();
         });

@@ -11,7 +11,7 @@ class Carousel extends Model
 
     protected $table = 'carousel';
 
-    protected $fillable = ['nombre_carousel', 'url_carousel'];
+    protected $fillable = ['nombre_carousel','nombre_socio', 'url_carousel'];
 
     protected $primaryKey = 'id_carousel';
 

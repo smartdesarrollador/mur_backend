@@ -17,66 +17,193 @@ class TestimonioSeeder extends Seeder
         $horaActual = Carbon::now();
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 1",
+            'Titulo' => "Legal Compliance",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen1.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen1.png",
+            'imagen' => "Compliance.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Compliance.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 2",
+            'Titulo' => "Corporativo",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen2.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen2.png",
+            'imagen' => "Corporativo.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Corporativo.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 3",
+            'Titulo' => "Fusiones y Adquisiciones",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen3.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen3.png",
+            'imagen' => "icon-3.png",
+            'ruta_imagen' => "assets/imagen/testimonio/icon-3.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 4",
+            'Titulo' => "Derecho Financiero",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen4.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen4.png",
+            'imagen' => "Fondos de Inversion.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Fondos de Inversion.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 5",
+            'Titulo' => "Precios de Transferencia",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen5.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen5.png",
+            'imagen' => "Precios_de_Transferencia.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Precios_de_Transferencia.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 6",
+            'Titulo' => "Laboral",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen6.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen6.png",
+            'imagen' => "Laboral.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Laboral.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "TESTIMONIO 7",
+            'Titulo' => "Migratorio",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "imagen4.png",
-            'ruta_imagen' => "assets/imagen/testimonio/imagen4.png",
+            'imagen' => "Migratorio.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Migratorio.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Inmobiliario",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Inmobiliario.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Inmobiliario.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Administrativo",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Administrativo.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Administrativo.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Protección de Datos Personales",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Datos_Personales.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Datos_Personales.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Protección al Consumidor",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Proteccion_al_consumidor.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Proteccion_al_consumidor.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Propiedad Intelectual",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Marcas_y_Patentes.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Marcas_y_Patentes.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Contrataciones con el Estado",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Contrataciones_con_el_Estado.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Contrataciones_con_el_Estado.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Advisory",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Advisory.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Advisory.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Fusiones y Adquisciones",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Funsiones_y_Adquisciones.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Funsiones_y_Adquisciones.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Outsourcing",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Outsourcing.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Outsourcing.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Regulatorio",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Regulatorio.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Regulatorio.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Relaciones Gubernamentales",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Relaciones_Gubernamentales.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Relaciones_Gubernamentales.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Relaciones Sociales",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Relaciones_sociales.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Relaciones_sociales.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Seguridad y Salud en el Trabajo",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Seguridad_y_Salud_en_el_Trabajo.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Seguridad_y_Salud_en_el_Trabajo.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+
+        DB::table('testimonios')->insert([
+            'Titulo' => "Urbanismo",
+            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
+            'imagen' => "Urbanismo.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Urbanismo.png",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
+        
     }
 }
