@@ -21,6 +21,7 @@ use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TestimonioController;
+use App\Http\Controllers\BannerController;
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -126,6 +127,15 @@ Route::put('testimonios/{id}', [TestimonioController::class, 'update']);
 Route::delete('testimonios/{id}', [TestimonioController::class, 'destroy']);
 Route::post('testimonios/subir', [TestimonioController::class, 'file']);
 Route::post('testimonios/update', [TestimonioController::class, 'updateFile']);
+
+// Crud Banner
+Route::get('banners', [BannerController::class, 'index']);
+Route::post('banners', [BannerController::class, 'store']);
+Route::get('banners/{id}', [BannerController::class, 'show']);
+Route::put('banners/{id}', [BannerController::class, 'update']);
+Route::delete('banners/{id}', [BannerController::class, 'destroy']);
+Route::post('banners/subir', [BannerController::class, 'file']);
+Route::post('banners/update', [BannerController::class, 'updateFile']);
 
 
 
