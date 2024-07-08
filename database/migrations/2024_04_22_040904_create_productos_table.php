@@ -14,16 +14,17 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id("id_producto");
             $table->string("nombre", 250)->nullable();
-            $table->string("resumen", 250)->nullable();
+            $table->string("resumen", 500)->nullable();
             $table->text("descripcion")->nullable();
-            $table->string("duracion", 250)->nullable();
+            $table->string("correo", 250)->nullable();
+            $table->string("telefono", 250)->nullable();
             $table->string("imagen", 250)->nullable();
             $table->string("ruta_imagen", 250)->nullable();
-            /* $table->string("maestro", 250)->nullable(); */
+         /*    $table->string("maestro", 250)->nullable();
             $table->string("observacion", 250)->nullable();
             $table->float("precio")->nullable();
             $table->string("destacado", 20)->nullable();
-            /* $table->boolean('destacado')->default(false); */
+            $table->boolean('destacado')->default(false); */
             $table->unsignedBigInteger("categoria_producto_id")->nullable();
             $table->foreign("categoria_producto_id")->references("id_categoria_producto")->on("categoria_productos")->onDelete("set null");
             /* $table->float("precio_tachado")->nullable();

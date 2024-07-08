@@ -16,15 +16,11 @@ class Producto extends Model
 
     protected $primaryKey = 'id_producto';
 
-     protected $fillable = ['nombre','resumen','descripcion','duracion','imagen','ruta_imagen','observacion','precio','destacado', 'categoria_producto_id'];
+     protected $fillable = ['nombre','resumen','descripcion','correo','telefono','ruta_imagen', 'categoria_producto_id'];
 
     public function categoria_productos()
     {
         return $this->belongsTo(CategoriaProducto::class, 'categoria_producto_id', 'id_categoria_producto');
     }
 
-    public function pedidos()
-    {
-        return $this->belongsToMany(Pedido::class, 'detalle_pedidos', 'id_producto', 'id_pedido');
-    }
 }

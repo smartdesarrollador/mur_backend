@@ -99,11 +99,10 @@ class ProductoController extends Controller
             $nombre = $request->input('nombre');
             $resumen = $request->input('resumen');
             $descripcion = $request->input('descripcion');
-            $duracion = $request->input('duracion');
+            $correo = $request->input('correo');
             /* $maestro = $request->input('maestro'); */
-            $observacion = $request->input('observacion');
-            $precio = $request->input('precio');
-            $destacado = $request->input('destacado');
+            $telefono = $request->input('telefono');
+            
             $categoria_producto_id = $request->input('categoria_producto_id');
 
             $completeFileName = $request->file('imagen')->getClientOriginalName();
@@ -116,13 +115,11 @@ class ProductoController extends Controller
             $producto->nombre = $nombre;
             $producto->resumen = $resumen;
             $producto->descripcion = $descripcion;
-            $producto->duracion = $duracion;
+            $producto->correo = $correo;
+            $producto->telefono = $telefono;
             $producto->imagen = $compPic;
             $producto->ruta_imagen = $this->urlAssets.'/'.$compPic; 
             /* $producto->maestro = $maestro; */
-            $producto->observacion = $observacion;
-            $producto->precio = $precio;
-            $producto->destacado = $destacado;
             $producto->categoria_producto_id = $categoria_producto_id;
         }
         if ($producto->save()) {
@@ -138,11 +135,9 @@ class ProductoController extends Controller
     $nombre = $request->input('nombre');
     $resumen = $request->input('resumen');
     $descripcion = $request->input('descripcion');
-    $duracion = $request->input('duracion');
+    $correo = $request->input('correo$correo');
     /* $maestro = $request->input('maestro'); */
-    $observacion = $request->input('observacion');
-    $precio = $request->input('precio');
-    $destacado = $request->input('destacado');
+    $telefono = $request->input('telefono');
     $categoria_producto_id = $request->input('categoria_producto_id');
 
     $producto = Producto::find($id);
@@ -167,24 +162,21 @@ class ProductoController extends Controller
         $producto->nombre = $nombre;
         $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
-        $producto->duracion = $duracion;
+        $producto->correo = $correo;
+        $producto->telefono = $telefono;
         $producto->imagen = $compPic;
         $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
         /* $producto->maestro = $maestro; */
-        $producto->observacion = $observacion;
-        $producto->precio = $precio;
-        $producto->destacado = $destacado;
         $producto->categoria_producto_id = $categoria_producto_id;
 
     }else{
          $producto->nombre = $nombre;
          $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
-        $producto->duracion = $duracion;
+        $producto->correo = $correo;
         /* $producto->maestro = $maestro; */
-        $producto->observacion = $observacion;
-        $producto->precio = $precio;
-        $producto->destacado = $destacado;
+        $producto->telefono = $telefono;
+        
         $producto->categoria_producto_id = $categoria_producto_id;
     }
 

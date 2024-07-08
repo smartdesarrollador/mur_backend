@@ -17,15 +17,15 @@ class ContactoSeeder extends Seeder
             'nombre' => "Juan",
             'correo' => "juan@testdominio.com",
             'telefono' => "939494509",
-            'asunto' => "Informacion Curso",
-            'mensaje' => "Solicito información del curso por favor",
+            'asunto' => "Solicito información",
+            'mensaje' => "Solicito información",
         ]);
 
         DB::table('contactos')->insert([
             'nombre' => "Lucia",
             'correo' => "lucia@testdominio.com",
             'telefono' => "999393959",
-            'asunto' => "Informacion",
+            'asunto' => "Solicito información",
             'mensaje' => "Solicito información",
         ]);
 
@@ -33,8 +33,8 @@ class ContactoSeeder extends Seeder
             'nombre' => "Pedro",
             'correo' => "pedro@testdominio.com",
             'telefono' => "905845007",
-            'asunto' => "Informacion de la Especialidad",
-            'mensaje' => "Solicito información de la Especialidad por favor",
+            'asunto' => "Solicito información",
+            'mensaje' => "Solicito información",
         ]);
     }
 }
