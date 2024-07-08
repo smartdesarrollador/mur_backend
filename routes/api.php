@@ -22,6 +22,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TestimonioController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\SliderController;
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -136,6 +137,15 @@ Route::put('banners/{id}', [BannerController::class, 'update']);
 Route::delete('banners/{id}', [BannerController::class, 'destroy']);
 Route::post('banners/subir', [BannerController::class, 'file']);
 Route::post('banners/update', [BannerController::class, 'updateFile']);
+
+// Crud Slider
+Route::get('sliders', [SliderController::class, 'index']);
+Route::post('sliders', [SliderController::class, 'store']);
+Route::get('sliders/{id}', [SliderController::class, 'show']);
+Route::put('sliders/{id}', [SliderController::class, 'update']);
+Route::delete('sliders/{id}', [SliderController::class, 'destroy']);
+Route::post('sliders/subir', [SliderController::class, 'file']);
+Route::post('sliders/update', [SliderController::class, 'updateFile']);
 
 
 

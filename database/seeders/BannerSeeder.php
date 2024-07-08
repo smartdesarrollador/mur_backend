@@ -17,7 +17,7 @@ class BannerSeeder extends Seeder
         $horaActual = Carbon::now();
 
         DB::table('banners')->insert([
-            'Titulo' => "Líderes en soluciones legales",
+            'titulo' => "Líderes en soluciones legales",
             'descripcion' => "Creatividad, innovación y excelencia.",
             'imagen' => "banner_1.jpg",
             'ruta_imagen' => "assets/imagen/banner/banner_1.jpg",

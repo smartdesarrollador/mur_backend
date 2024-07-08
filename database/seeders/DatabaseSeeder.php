@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             ContactoSeeder::class,
             TestimonioSeeder::class,
             BannerSeeder::class,
-            
+            SliderSeeder::class,
         ]);
     }
 }
