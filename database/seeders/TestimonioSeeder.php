@@ -37,8 +37,8 @@ class TestimonioSeeder extends Seeder
         DB::table('testimonios')->insert([
             'Titulo' => "Fusiones y Adquisiciones",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "icon-3.png",
-            'ruta_imagen' => "assets/imagen/testimonio/icon-3.png",
+            'imagen' => "Funsiones_y_Adquisciones.png",
+            'ruta_imagen' => "assets/imagen/testimonio/Funsiones_y_Adquisciones.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -134,33 +134,6 @@ class TestimonioSeeder extends Seeder
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "Advisory",
-            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "Advisory.png",
-            'ruta_imagen' => "assets/imagen/testimonio/Advisory.png",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-        ]);
-
-        DB::table('testimonios')->insert([
-            'Titulo' => "Fusiones y Adquisciones",
-            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "Funsiones_y_Adquisciones.png",
-            'ruta_imagen' => "assets/imagen/testimonio/Funsiones_y_Adquisciones.png",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-        ]);
-
-        DB::table('testimonios')->insert([
-            'Titulo' => "Outsourcing",
-            'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "Outsourcing.png",
-            'ruta_imagen' => "assets/imagen/testimonio/Outsourcing.png",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-        ]);
-
-        DB::table('testimonios')->insert([
             'Titulo' => "Regulatorio",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
             'imagen' => "Regulatorio.png",
@@ -197,13 +170,17 @@ class TestimonioSeeder extends Seeder
         ]);
 
         DB::table('testimonios')->insert([
-            'Titulo' => "Urbanismo",
+            'Titulo' => "Tributario",
             'descripcion' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
-            'imagen' => "Urbanismo.png",
-            'ruta_imagen' => "assets/imagen/testimonio/Urbanismo.png",
+            'imagen' => "icon-5.png",
+            'ruta_imagen' => "assets/imagen/testimonio/icon-5.png",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
+
+        
+
+       
         
     }
 }

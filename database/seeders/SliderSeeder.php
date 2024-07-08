@@ -130,7 +130,7 @@ class SliderSeeder extends Seeder
 
         DB::table('sliders')->insert([
             'id_slider' => 11,
-            'titulo' => "Johan Serrano",
+            'titulo' => "Carlos Enríquez",
             'descripcion' => "",
             'imagen' => "foto_11.jpg",
             'ruta_imagen' => "assets/imagen/carousel/foto_11.jpg",
@@ -141,7 +141,7 @@ class SliderSeeder extends Seeder
 
         DB::table('sliders')->insert([
             'id_slider' => 12,
-            'titulo' => "José Raunelli",
+            'titulo' => "Allison Trelles",
             'descripcion' => "",
             'imagen' => "foto_12.jpg",
             'ruta_imagen' => "assets/imagen/carousel/foto_12.jpg",
@@ -152,10 +152,43 @@ class SliderSeeder extends Seeder
 
         DB::table('sliders')->insert([
             'id_slider' => 13,
-            'titulo' => "Ximena Márquez",
+            'titulo' => "Johan Serrano",
             'descripcion' => "",
             'imagen' => "foto_13.jpg",
             'ruta_imagen' => "assets/imagen/carousel/foto_13.jpg",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+
+        ]);
+
+        DB::table('sliders')->insert([
+            'id_slider' => 14,
+            'titulo' => "José Raunelli",
+            'descripcion' => "",
+            'imagen' => "foto_14.jpg",
+            'ruta_imagen' => "assets/imagen/carousel/foto_14.jpg",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+
+        ]);
+
+        DB::table('sliders')->insert([
+            'id_slider' => 15,
+            'titulo' => "Ximena Márquez",
+            'descripcion' => "",
+            'imagen' => "foto_15.jpg",
+            'ruta_imagen' => "assets/imagen/carousel/foto_15.jpg",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+
+        ]);
+
+        DB::table('sliders')->insert([
+            'id_slider' => 16,
+            'titulo' => "César Salazar",
+            'descripcion' => "",
+            'imagen' => "foto_16.jpg",
+            'ruta_imagen' => "assets/imagen/carousel/foto_16.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 

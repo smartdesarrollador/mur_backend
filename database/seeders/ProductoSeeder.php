@@ -214,6 +214,17 @@ class ProductoSeeder extends Seeder
             'updated_at' => $horaActual,
         ]);
 
-       
+       DB::table('productos')->insert([
+            'nombre' => "César Salazar",
+            'resumen' => "César Salazar es Gerente del Área Tributaria. Ha realizado servicios de consultoría tributaria, planeamiento tributario, revisiones de impuestos, asesoría en fiscalizaciones tributarias, patrocinio de procedimientos tributarios a nivel administrativo y judicial, y en entes regulatorios como OEFA y OSINERGMIN.",
+            'descripcion' => $descripcion,
+            'correo' => "cesarsalazar@evv.pe",
+            'telefono' => "999999999",
+            'imagen' => "socio_16.jpg",
+            'ruta_imagen' => "assets/imagen/producto/socio_16.jpg",
+            'categoria_producto_id' => 1,
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+        ]);
     }
 }
