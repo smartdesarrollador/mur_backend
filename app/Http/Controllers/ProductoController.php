@@ -135,7 +135,7 @@ class ProductoController extends Controller
     $nombre = $request->input('nombre');
     $resumen = $request->input('resumen');
     $descripcion = $request->input('descripcion');
-    $correo = $request->input('correo$correo');
+    $correo = $request->input('correo');
     /* $maestro = $request->input('maestro'); */
     $telefono = $request->input('telefono');
     $categoria_producto_id = $request->input('categoria_producto_id');
