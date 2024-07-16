@@ -56,7 +56,7 @@ class CarouselSeeder extends Seeder
 
         ]);
 
-        DB::table('carousel')->insert([
+        /* DB::table('carousel')->insert([
             'id_carousel' => 5,
             'nombre_carousel' => "foto_5.jpg",
             'nombre_socio' => "Kateleen Urbina",
@@ -64,7 +64,7 @@ class CarouselSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
         DB::table('carousel')->insert([
             'id_carousel' => 6,
@@ -116,7 +116,7 @@ class CarouselSeeder extends Seeder
 
         ]);
 
-        DB::table('carousel')->insert([
+        /* DB::table('carousel')->insert([
             'id_carousel' => 11,
             'nombre_carousel' => "foto_11.jpg",
             'nombre_socio' => "Johan Serrano",
@@ -124,9 +124,9 @@ class CarouselSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
-        DB::table('carousel')->insert([
+        /* DB::table('carousel')->insert([
             'id_carousel' => 12,
             'nombre_carousel' => "foto_12.jpg",
             'nombre_socio' => "José Raunelli",
@@ -134,9 +134,9 @@ class CarouselSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
-        DB::table('carousel')->insert([
+        /* DB::table('carousel')->insert([
             'id_carousel' => 13,
             'nombre_carousel' => "foto_13.jpg",
             'nombre_socio' => "Ximena Márquez",
@@ -144,7 +144,7 @@ class CarouselSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
         
 

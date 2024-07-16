@@ -62,7 +62,7 @@ class SliderSeeder extends Seeder
 
         ]);
 
-        DB::table('sliders')->insert([
+        /* DB::table('sliders')->insert([
             'id_slider' => 5,
             'titulo' => "Kateleen Urbina",
             'descripcion' => "",
@@ -71,7 +71,7 @@ class SliderSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
         DB::table('sliders')->insert([
             'id_slider' => 6,
@@ -150,7 +150,7 @@ class SliderSeeder extends Seeder
 
         ]);
 
-        DB::table('sliders')->insert([
+        /* DB::table('sliders')->insert([
             'id_slider' => 13,
             'titulo' => "Johan Serrano",
             'descripcion' => "",
@@ -159,9 +159,9 @@ class SliderSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
-        DB::table('sliders')->insert([
+       /*  DB::table('sliders')->insert([
             'id_slider' => 14,
             'titulo' => "José Raunelli",
             'descripcion' => "",
@@ -170,9 +170,9 @@ class SliderSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
-        DB::table('sliders')->insert([
+        /* DB::table('sliders')->insert([
             'id_slider' => 15,
             'titulo' => "Ximena Márquez",
             'descripcion' => "",
@@ -181,7 +181,7 @@ class SliderSeeder extends Seeder
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
-        ]);
+        ]); */
 
         DB::table('sliders')->insert([
             'id_slider' => 16,
