@@ -98,8 +98,8 @@ class TestimonioSeeder extends Seeder
             'descripcion' => "<p>Nuestra Firma se encarga de realizar estudio de titulos, negociación, compra y regularización de inmuebles, &nbsp;tanto de predios urbanos como rurales, así como cambio de zonificación, procesos de acumulación, división, &nbsp;saneamiento de linderos, superposición de tierras, entre otros.</p><p>&nbsp;</p><p>•Estudio de titulos registrales. &nbsp;</p><p>•Estudio de titulos en catastro.</p><p>•&nbsp; Procesos de superposición, acumulación, división y partición.</p><p>•&nbsp; Prescripción adquisitiva de dominio.</p><p>•Rectificación y delimitación de áreas y linderos.</p><p>•&nbsp; Independización de predios urbanos o agrícolas.</p><p>•&nbsp; Peritajes.</p><p>•&nbsp; Compraventa de inmuebles.</p><p>&nbsp;</p><p><strong>PARTE DE NUESTRA EXPERIENCIA:</strong></p><p>&nbsp;</p><p>Habilitación urbana para uno de los grupos industriales con alta presencia en el mercado peruano, dedicada &nbsp;a la producción textil, cerámicos y químicos.</p><p>Adquisición y acumulación de cuatro propiedades en San Isidro, para el desarrollo de un proyecto inmobiliario en Lima.</p><p>Asesoría para una importante inmobiliaria en la negociación de un fideicomiso de ﬂujos para el desarrollo &nbsp;de un proyecto inmobiliario en Santiago de Surco.</p><p>Estructuración de un proyecto inmobiliario que implicaba la renegociación con fondos de inversión y la reestructuración de deuda con terceros, para su adecuado ajuste.</p><p>Estudio de titulos de diversas propiedades en la franja de la costa verde, para la realización de un proyecto inmobiliario, la misma que implicaba el determinar el poder reajustar el uso de la zona.</p><p>&nbsp;</p>",
             'imagen' => "Inmobiliario.png",
             'ruta_imagen' => "assets/imagen/testimonio/Inmobiliario.png",
-            'banner' => "Inmobiliario.png",
-            'ruta_banner' => "assets/imagen/testimonio/banner/Inmobiliario.png",
+            'banner' => "Inmobiliario.jpg",
+            'ruta_banner' => "assets/imagen/testimonio/banner/Inmobiliario.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
