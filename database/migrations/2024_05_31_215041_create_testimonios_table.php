@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text("descripcion")->nullable();
             $table->string("imagen", 250)->nullable();
             $table->string("ruta_imagen", 250)->nullable();
+            $table->string("banner", 250)->nullable();
+            $table->string("ruta_banner", 250)->nullable();
             $table->timestamps();
         });
     }

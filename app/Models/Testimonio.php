@@ -11,7 +11,7 @@ class Testimonio extends Model
 
     protected $table = 'testimonios';
 
-    protected $fillable = ['titulo', 'descripcion','imagen','ruta_imagen'];
+    protected $fillable = ['titulo', 'descripcion','imagen','ruta_imagen','banner','ruta_banner'];
 
     protected $primaryKey = 'id_testimonio';
 }
