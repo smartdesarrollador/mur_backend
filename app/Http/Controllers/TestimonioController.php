@@ -14,11 +14,16 @@ class TestimonioController extends Controller
 {
     private $urlAssets;
     private $urlAssetsProd;
+    private $urlAssetsBanner;
+    private $urlAssetsProdBanner;
+
 
     public function __construct()
     {
         $this->urlAssets = 'assets/imagen/testimonio';
         $this->urlAssetsProd = config('myconfig.url_upload_testimonio');
+        $this->urlAssetsBanner = 'assets/imagen/testimonio/banner';
+        $this->urlAssetsProdBanner = config('myconfig.url_upload_testimonio_banner');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/testimonio'; */
     }
 
@@ -57,19 +62,13 @@ class TestimonioController extends Controller
         ],Response::HTTP_CREATED);
     }
 
-    public function destroy($id){
-        $id=Testimonio::find($id);
-        $id->delete();
-        return response()->json([
-            'message'=>"Registro eliminado satisfactoriamente"
-        ],Response::HTTP_OK);
-    }
+    
 
      public function file(Request $request)
     {
         $testimonio= new Testimonio();
 
-        if ($request->hasFile('imagen')) {
+        if ($request->hasFile('imagen') || $request->hasFile('banner')) {
 
             $titulo = $request->input('titulo');
             $descripcion = $request->input('descripcion');
@@ -81,10 +80,18 @@ class TestimonioController extends Controller
            $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
            //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
+           $completeFileNameBanner = $request->file('banner')->getClientOriginalName();
+            $fileNameOnlyBanner = pathinfo($completeFileNameBanner, PATHINFO_FILENAME);
+            $extenshionBanner = $request->file('banner')->getClientOriginalExtension();
+            $compPicBanner = str_replace('', '_', $fileNameOnlyBanner) . '-' . rand() . '_' . time() . '.' . $extenshionBanner;
+           $path = $request->file('banner')->move($this->urlAssetsProdBanner, $compPicBanner);
+
             $testimonio->titulo = $titulo;
             $testimonio->descripcion = $descripcion;
             $testimonio->imagen = $compPic;
-            $testimonio->ruta_imagen = $this->urlAssets.'/'.$compPic; 
+            $testimonio->ruta_imagen = $this->urlAssets.'/'.$compPic;
+            $testimonio->banner = $compPicBanner;
+            $testimonio->ruta_banner = $this->urlAssetsBanner.'/'.$compPicBanner;  
             /* $testimonio->maestro = $maestro; */
         }
         if ($testimonio->save()) {
@@ -106,24 +113,46 @@ class TestimonioController extends Controller
         return ['status' => false, 'message' => 'Post Not Found'];
     }
 
-    if ($request->hasFile('imagen')) {
+    if ($request->hasFile('imagen') || $request->hasFile('banner')) {
+
+        if($request->hasFile('imagen')){
         $completeFileName = $request->file('imagen')->getClientOriginalName();
         $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
         $extension = $request->file('imagen')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
-        
          $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
          //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
- 
-        if ($testimonio->imagen) {
-            $this->deleteFile($testimonio->imagen);
-        }
 
-        $testimonio->titulo = $titulo;
+          if ($testimonio->imagen) {
+            $this->deleteFile($testimonio->imagen);
+           }
+
+           $testimonio->titulo = $titulo;
         $testimonio->descripcion = $descripcion;
         $testimonio->imagen = $compPic;
         $testimonio->ruta_imagen = $this->urlAssets.'/'.$compPic;
         /* $testimonio->maestro = $maestro; */
+        }
+
+       if($request->hasFile('banner')){
+         $completeFileNameBanner = $request->file('banner')->getClientOriginalName();
+        $fileNameOnlyBanner = pathinfo($completeFileNameBanner, PATHINFO_FILENAME);
+        $extensionBanner = $request->file('banner')->getClientOriginalExtension();
+        $compPicBanner = str_replace('', '_', $fileNameOnlyBanner) . '-' . rand() . '_' . time() . '.' . $extensionBanner;
+         $path = $request->file('banner')->move($this->urlAssetsProdBanner, $compPicBanner);
+ 
+            if ($testimonio->banner) {
+                $this->deleteFileBanner($testimonio->banner);
+            }
+
+            $testimonio->titulo = $titulo;
+        $testimonio->descripcion = $descripcion;
+        $testimonio->banner = $compPicBanner;
+        $testimonio->ruta_banner = $this->urlAssetsBanner.'/'.$compPicBanner;
+        /* $testimonio->maestro = $maestro; */
+        }
+
+       
 
     }else{
          $testimonio->titulo = $titulo;
@@ -137,7 +166,7 @@ class TestimonioController extends Controller
     }
 }
 
-// Eliminar imagen de carpeta de imagenes
+
     public function deleteFile($fileName)
 {
     $filePath = $this->urlAssetsProd . '/' . $fileName;
@@ -155,12 +184,53 @@ class TestimonioController extends Controller
     }
 }
 
-public function destroyFile($id){
+
+
+/* public function destroyFile($id){
         $testimonio=Testimonio::find($id);
         $this->deleteFile($testimonio->imagen);
         $testimonio->delete();
         return response()->json([
             'message'=>"Registro eliminado satisfactoriamente"
         ],Response::HTTP_OK);
+    } */
+
+
+
+   
+     
+
+
+    public function deleteFileBanner($fileName)
+{
+    $filePath = $this->urlAssetsProdBanner . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
+
+    
+    if (file_exists($filePath)) {
+        
+        if (unlink($filePath)) {
+            return true; 
+            return false; 
+        }
+    } else {
+        return true; 
+    }
+}
+
+public function destroy($id){
+    $testimonio=Testimonio::find($id);
+        $this->deleteFile($testimonio->imagen);
+        $this->deleteFileBanner($testimonio->banner);
+        $testimonio->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+
+        /* $id=Testimonio::find($id);
+        $id->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK); */
     }
 }
