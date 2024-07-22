@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string("ruta_imagen", 250)->nullable();
             $table->string("banner", 250)->nullable();
             $table->string("ruta_banner", 250)->nullable();
+            $table->string("imagen_uno", 250)->nullable();
+            $table->string("ruta_imagen_uno", 250)->nullable();
+            $table->string("imagen_dos", 250)->nullable();
+            $table->string("ruta_imagen_dos", 250)->nullable();
             $table->timestamps();
         });
     }

@@ -16,7 +16,10 @@ class TestimonioController extends Controller
     private $urlAssetsProd;
     private $urlAssetsBanner;
     private $urlAssetsProdBanner;
-
+    private $urlAssetsImagenUno;
+    private $urlAssetsProdImagenUno;
+    private $urlAssetsImagenDos;
+    private $urlAssetsProdImagenDos;
 
     public function __construct()
     {
@@ -24,6 +27,10 @@ class TestimonioController extends Controller
         $this->urlAssetsProd = config('myconfig.url_upload_testimonio');
         $this->urlAssetsBanner = 'assets/imagen/testimonio/banner';
         $this->urlAssetsProdBanner = config('myconfig.url_upload_testimonio_banner');
+        $this->urlAssetsImagenUno = 'assets/imagen/testimonio/imagen_uno';
+        $this->urlAssetsProdImagenUno = config('myconfig.url_upload_testimonio_imagen_uno');
+        $this->urlAssetsImagenDos = 'assets/imagen/testimonio/imagen_dos';
+        $this->urlAssetsProdImagenDos = config('myconfig.url_upload_testimonio_imagen_dos');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/testimonio'; */
     }
 
@@ -68,7 +75,7 @@ class TestimonioController extends Controller
     {
         $testimonio= new Testimonio();
 
-        if ($request->hasFile('imagen') || $request->hasFile('banner')) {
+        if ($request->hasFile('imagen') || $request->hasFile('banner') || $request->hasFile('imagen_uno') || $request->hasFile('imagen_dos')) {
 
             $titulo = $request->input('titulo');
             $descripcion = $request->input('descripcion');
@@ -86,12 +93,28 @@ class TestimonioController extends Controller
             $compPicBanner = str_replace('', '_', $fileNameOnlyBanner) . '-' . rand() . '_' . time() . '.' . $extenshionBanner;
            $path = $request->file('banner')->move($this->urlAssetsProdBanner, $compPicBanner);
 
+           $completeFileNameImagenUno = $request->file('imagen_uno')->getClientOriginalName();
+            $fileNameOnlyImagenUno = pathinfo($completeFileNameImagenUno, PATHINFO_FILENAME);
+            $extenshionImagenUno = $request->file('imagen_uno')->getClientOriginalExtension();
+            $compPicImagenUno = str_replace('', '_', $fileNameOnlyImagenUno) . '-' . rand() . '_' . time() . '.' . $extenshionImagenUno;
+           $path = $request->file('imagen_uno')->move($this->urlAssetsProdImagenUno, $compPicImagenUno);
+
+           $completeFileNameImagenDos = $request->file('imagen_dos')->getClientOriginalName();
+            $fileNameOnlyImagenDos = pathinfo($completeFileNameImagenDos, PATHINFO_FILENAME);
+            $extenshionImagenDos = $request->file('imagen_dos')->getClientOriginalExtension();
+            $compPicImagenDos = str_replace('', '_', $fileNameOnlyImagenDos) . '-' . rand() . '_' . time() . '.' . $extenshionImagenDos;
+           $path = $request->file('imagen_dos')->move($this->urlAssetsProdImagenDos, $compPicImagenDos);
+           
             $testimonio->titulo = $titulo;
             $testimonio->descripcion = $descripcion;
             $testimonio->imagen = $compPic;
             $testimonio->ruta_imagen = $this->urlAssets.'/'.$compPic;
             $testimonio->banner = $compPicBanner;
             $testimonio->ruta_banner = $this->urlAssetsBanner.'/'.$compPicBanner;  
+            $testimonio->imagen_uno = $compPicImagenUno;
+            $testimonio->ruta_imagen_uno = $this->urlAssetsImagenUno.'/'.$compPicImagenUno;  
+            $testimonio->imagen_dos = $compPicImagenDos;
+            $testimonio->ruta_imagen_dos = $this->urlAssetsImagenDos.'/'.$compPicImagenDos;  
             /* $testimonio->maestro = $maestro; */
         }
         if ($testimonio->save()) {
@@ -113,7 +136,7 @@ class TestimonioController extends Controller
         return ['status' => false, 'message' => 'Post Not Found'];
     }
 
-    if ($request->hasFile('imagen') || $request->hasFile('banner')) {
+    if ($request->hasFile('imagen') || $request->hasFile('banner') || $request->hasFile('imagen_uno') || $request->hasFile('imagen_dos')) {
 
         if($request->hasFile('imagen')){
         $completeFileName = $request->file('imagen')->getClientOriginalName();
@@ -152,7 +175,43 @@ class TestimonioController extends Controller
         /* $testimonio->maestro = $maestro; */
         }
 
-       
+       if($request->hasFile('imagen_uno')){
+        $completeFileNameImagenUno = $request->file('imagen_uno')->getClientOriginalName();
+        $fileNameOnlyImagenUno = pathinfo($completeFileNameImagenUno, PATHINFO_FILENAME);
+        $extensionImagenUno = $request->file('imagen_uno')->getClientOriginalExtension();
+        $compPicImagenUno = str_replace('', '_', $fileNameOnlyImagenUno) . '-' . rand() . '_' . time() . '.' . $extensionImagenUno;
+         $path = $request->file('imagen_uno')->move($this->urlAssetsProdImagenUno, $compPicImagenUno);
+         //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
+
+          if ($testimonio->imagen_uno) {
+            $this->deleteFileImagenUno($testimonio->imagen_uno);
+           }
+
+           $testimonio->titulo = $titulo;
+        $testimonio->descripcion = $descripcion;
+        $testimonio->imagen_uno = $compPicImagenUno;
+        $testimonio->ruta_imagen_uno = $this->urlAssetsImagenUno.'/'.$compPicImagenUno;
+        /* $testimonio->maestro = $maestro; */
+        }
+
+        if($request->hasFile('imagen_dos')){
+        $completeFileNameImagenDos = $request->file('imagen_dos')->getClientOriginalName();
+        $fileNameOnlyImagenDos = pathinfo($completeFileNameImagenDos, PATHINFO_FILENAME);
+        $extensionImagenDos = $request->file('imagen_dos')->getClientOriginalExtension();
+        $compPicImagenDos = str_replace('', '_', $fileNameOnlyImagenDos) . '-' . rand() . '_' . time() . '.' . $extensionImagenDos;
+         $path = $request->file('imagen_dos')->move($this->urlAssetsProdImagenDos, $compPicImagenDos);
+         //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
+
+          if ($testimonio->imagen_dos) {
+            $this->deleteFileImagenDos($testimonio->imagen_dos);
+           }
+
+           $testimonio->titulo = $titulo;
+        $testimonio->descripcion = $descripcion;
+        $testimonio->imagen_dos = $compPicImagenDos;
+        $testimonio->ruta_imagen_dos = $this->urlAssetsImagenDos.'/'.$compPicImagenDos;
+        /* $testimonio->maestro = $maestro; */
+        }
 
     }else{
          $testimonio->titulo = $titulo;
@@ -218,10 +277,46 @@ class TestimonioController extends Controller
     }
 }
 
+public function deleteFileImagenUno($fileName)
+{
+    $filePath = $this->urlAssetsProdImagenUno . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
+
+    
+    if (file_exists($filePath)) {
+        
+        if (unlink($filePath)) {
+            return true; 
+            return false; 
+        }
+    } else {
+        return true; 
+    }
+}
+
+public function deleteFileImagenDos($fileName)
+{
+    $filePath = $this->urlAssetsProdImagenDos . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
+
+    
+    if (file_exists($filePath)) {
+        
+        if (unlink($filePath)) {
+            return true; 
+            return false; 
+        }
+    } else {
+        return true; 
+    }
+}
+
 public function destroy($id){
     $testimonio=Testimonio::find($id);
         $this->deleteFile($testimonio->imagen);
         $this->deleteFileBanner($testimonio->banner);
+        $this->deleteFileImagenUno($testimonio->imagen_uno);
+        $this->deleteFileImagenDos($testimonio->imagen_dos);
         $testimonio->delete();
         return response()->json([
             'message'=>"Registro eliminado satisfactoriamente"
