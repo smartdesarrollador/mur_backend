@@ -23,6 +23,7 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TestimonioController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SalaController;
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -148,5 +149,13 @@ Route::post('sliders/subir', [SliderController::class, 'file']);
 Route::post('sliders/update', [SliderController::class, 'updateFile']);
 
 
-
+// Crud Salas
+Route::get('salas', [SalaController::class, 'index']);
+Route::get('salas/destacados', [SalaController::class, 'obtenerDestacados']);
+Route::post('salas', [SalaController::class, 'store']);
+Route::get('salas/{id}', [SalaController::class, 'show']);
+Route::put('salas/{id}', [SalaController::class, 'update']);
+Route::delete('salas/{id}', [SalaController::class, 'destroy']);
+Route::post('salas/subir', [SalaController::class, 'file']);
+Route::post('salas/update', [SalaController::class, 'updateFile']);
 

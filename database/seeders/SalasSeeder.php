@@ -23,7 +23,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_1.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_1.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_1.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -33,7 +33,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_2.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_2.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_2.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -43,7 +43,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_3.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_3.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_3.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -53,7 +53,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_4.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_4.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_4.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -63,7 +63,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_5.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_5.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_5.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -73,7 +73,7 @@ class SalasSeeder extends Seeder
             'descripcion' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
             'link' => "https://nombreenlace.com",
             'imagen' => "imagen_6.jpg",
-            'ruta_imagen' => "assets/imagen/sala-de-prensa/imagen_6.jpg",
+            'ruta_imagen' => "assets/imagen/sala/imagen_6.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
