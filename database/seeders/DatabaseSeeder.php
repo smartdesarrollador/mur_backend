@@ -60,6 +60,7 @@ class DatabaseSeeder extends Seeder
             BannerSeeder::class,
             SliderSeeder::class,
             SalasSeeder::class,
+            InformativoSeeder::class,
         ]);
     }
 }

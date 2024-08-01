@@ -24,6 +24,7 @@ use App\Http\Controllers\TestimonioController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SalaController;
+use App\Http\Controllers\InformativoController;
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -158,4 +159,14 @@ Route::put('salas/{id}', [SalaController::class, 'update']);
 Route::delete('salas/{id}', [SalaController::class, 'destroy']);
 Route::post('salas/subir', [SalaController::class, 'file']);
 Route::post('salas/update', [SalaController::class, 'updateFile']);
+
+// Crud Informativos
+Route::get('informativos', [InformativoController::class, 'index']);
+Route::get('informativos/destacados', [InformativoController::class, 'obtenerDestacados']);
+Route::post('informativos', [InformativoController::class, 'store']);
+Route::get('informativos/{id}', [InformativoController::class, 'show']);
+Route::put('informativos/{id}', [InformativoController::class, 'update']);
+Route::delete('informativos/{id}', [InformativoController::class, 'destroy']);
+Route::post('informativos/subir', [InformativoController::class, 'file']);
+Route::post('informativos/update', [InformativoController::class, 'updateFile']);
 
