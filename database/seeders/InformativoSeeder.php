@@ -28,7 +28,7 @@ class InformativoSeeder extends Seeder
             'ruta_imagen' => "assets/imagen/informativo/informativo_1.jpg",
             /* 'maestro' => "maestro1", */
             'autor' => "John Smith",
-            'destacado' => "false",
+            'destacado' => "true",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -42,7 +42,7 @@ class InformativoSeeder extends Seeder
             'ruta_imagen' => "assets/imagen/informativo/informativo_2.jpg",
             /* 'maestro' => "maestro1", */
             'autor' => "John Smith",
-            'destacado' => "false",
+            'destacado' => "true",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
@@ -56,7 +56,7 @@ class InformativoSeeder extends Seeder
             'ruta_imagen' => "assets/imagen/informativo/informativo_3.jpg",
             /* 'maestro' => "maestro1", */
             'autor' => "John Smith",
-            'destacado' => "false",
+            'destacado' => "true",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
