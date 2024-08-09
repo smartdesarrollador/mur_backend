@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    {/* 4.- LOGIN_REGISTER_BASICO-V1-P1 */
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        /* /4.- LOGIN_REGISTER_BASICO-V1-P1 */
     }
 
     /**

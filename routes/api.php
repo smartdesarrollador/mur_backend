@@ -4,8 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-
+/* 10.- LOGIN_REGISTER_BASICO-V1-P1 */
 use App\Http\Controllers\UserController;
+/* /10.- LOGIN_REGISTER_BASICO-V1-P1 */
+
 
 use App\Mail\TestContact;
 use App\Http\Controllers\Test\ContactController;
@@ -91,10 +93,11 @@ Route::put('mision/actualizar/{id}', [MisionController::class, 'update']);
 
 Route::post('mision/update/upload', [MisionController::class, 'updateFile']);
 
-
+/* 11.- LOGIN_REGISTER_BASICO-V1-P1 */
 Route::post('register',[UserController::class,'register']);
 
 Route::post('login',[UserController::class,'login']);
+/* /11.- LOGIN_REGISTER_BASICO-V1-P1 */
 
 
 /* Test Envio Mail */

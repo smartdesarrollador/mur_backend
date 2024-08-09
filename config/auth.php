@@ -41,7 +41,9 @@ return [
             'provider' => 'users',
         ],
         'api' => [
+            /* 3.- LOGIN_REGISTER_BASICO-V1-P1 */
         'driver' => 'jwt',
+        /* /3.- LOGIN_REGISTER_BASICO-V1-P1 */
         'provider' => 'users',
     ],
     ],

@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+
 use App\Models\Rol;
 use App\Models\Permiso;
+
+/* 8.- LOGIN_REGISTER_BASICO-V1-P1 */
+use App\Models\User;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTExceptions;
+/* /8.- LOGIN_REGISTER_BASICO-V1-P1 */
 
 class UserController extends Controller
 {
+    /* 9.- LOGIN_REGISTER_BASICO-V1-P1 */
     public function register(Request $request){
 $user = User::where('email',$request['email'])->first();
 
@@ -33,6 +38,7 @@ $user = User::create([
         
         return response()->json($response);
     }
+     
 
     public function login(Request $request){
         $credentials = $request->only('email','password');
@@ -70,4 +76,6 @@ if(!JWTAuth::attempt($credentials)){
         return response()->json($response);
 
     }
+
+    /* /9.- LOGIN_REGISTER_BASICO-V1-P1 */
 }

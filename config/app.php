@@ -168,8 +168,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        /* 2.- LOGIN_REGISTER_BASICO-V1-P1 */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        /* /2.- LOGIN_REGISTER_BASICO-V1-P1 */
     ])->toArray(),
 
     /*
