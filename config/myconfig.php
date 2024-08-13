@@ -11,4 +11,5 @@ return [
     'url_upload_testimonio_imagen_dos' => env('URL_UPLOAD_TESTIMONIO_IMAGEN_DOS', 'assets/imagen/testimonio/imagen_dos'),
     'url_upload_sala' => env('URL_UPLOAD_SALA', 'assets/imagen/sala'),
     'url_upload_informativo' => env('URL_UPLOAD_INFORMATIVO', 'assets/imagen/informativo'),
+'url_upload_informativo_pdf' => env('URL_UPLOAD_INFORMATIVO_PDF', 'assets/pdfs/informativo'),
 ];

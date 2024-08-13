@@ -25,3 +25,11 @@ php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServicePro
 php artisan jwt:secret
 
 <!-- /1.- LOGIN_REGISTER_BASICO-V1-P1-->
+
+<!-- 12.- LOGIN_REGISTER_BASICO-V1-P1-->
+
+# ENLACE - IMAGENES DE EJEMPLO DE POSTMAN
+
+[enlace imagenes de ejemplo postman](https://docs.google.com/document/d/1-ZNhPkO5miKjyZrJ3XotMa3AxL6k4YL4IN3pEFhDKx8/edit "Título opcional")
+
+<!-- /12.- LOGIN_REGISTER_BASICO-V1-P1-->

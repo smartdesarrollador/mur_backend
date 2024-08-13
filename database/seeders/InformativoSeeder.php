@@ -27,6 +27,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_1.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_1.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "true",
             'created_at' => $horaActual,
@@ -41,6 +43,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_2.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_2.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "true",
             'created_at' => $horaActual,
@@ -55,6 +59,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_3.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_3.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "true",
             'created_at' => $horaActual,
@@ -69,6 +75,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_4.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_4.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,
@@ -83,6 +91,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_5.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_5.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,
@@ -97,6 +107,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_6.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_6.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,
@@ -111,6 +123,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_7.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_7.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,
@@ -125,6 +139,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_8.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_8.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,
@@ -139,6 +155,8 @@ class InformativoSeeder extends Seeder
             'imagen' => "informativo_9.jpg",
             'ruta_imagen' => "assets/imagen/informativo/informativo_9.jpg",
             /* 'maestro' => "maestro1", */
+            'pdf'=>"pdf_1.pdf",
+            'ruta_pdf'=>'assets/pdfs/informativo/pdf_1.pdf',
             'autor' => "John Smith",
             'destacado' => "false",
             'created_at' => $horaActual,

@@ -12,11 +12,15 @@ class InformativoController extends Controller
 {
     private $urlAssets;
     private $urlAssetsProd;
+    private $urlAssetsPdf;
+    private $urlAssetsProdPdf;
 
     public function __construct()
     {
         $this->urlAssets = 'assets/imagen/informativo';
         $this->urlAssetsProd = config('myconfig.url_upload_informativo');
+        $this->urlAssetsPdf = 'assets/pdfs/informativo';
+        $this->urlAssetsProdPdf = config('myconfig.url_upload_informativo_pdf');
     }
 
    public function index()
@@ -66,19 +70,13 @@ class InformativoController extends Controller
         ],Response::HTTP_CREATED);
     }
 
-    public function destroy($id){
-        $id=Informativo::find($id);
-        $id->delete();
-        return response()->json([
-            'message'=>"Registro eliminado satisfactoriamente"
-        ],Response::HTTP_OK);
-    }
+    
 
      public function file(Request $request)
     {
         $informativo= new Informativo();
 
-        if ($request->hasFile('imagen')) {
+        if ($request->hasFile('imagen') || $request->hasFile('pdf')) {
 
             $titulo = $request->input('titulo');
             $resumen = $request->input('resumen');
@@ -94,6 +92,12 @@ class InformativoController extends Controller
            $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
            //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
+           $completeFileNamePdf = $request->file('pdf')->getClientOriginalName();
+            $fileNameOnlyPdf = pathinfo($completeFileNamePdf, PATHINFO_FILENAME);
+            $extenshionPdf = $request->file('pdf')->getClientOriginalExtension();
+            $compPicPdf = str_replace('', '_', $fileNameOnlyPdf) . '-' . rand() . '_' . time() . '.' . $extenshionPdf;
+           $path = $request->file('pdf')->move($this->urlAssetsProdPdf, $compPicPdf);
+
             $informativo->titulo = $titulo;
             $informativo->resumen = $resumen;
             $informativo->descripcion = $descripcion;
@@ -102,6 +106,8 @@ class InformativoController extends Controller
             $informativo->ruta_imagen = $this->urlAssets.'/'.$compPic; 
             $informativo->autor = $autor;
             $informativo->destacado = $destacado;
+            $informativo->pdf = $compPicPdf;
+            $informativo->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
         }
         if ($informativo->save()) {
             return ['status' => true, 'message' => 'Datos guardados con exito'];
@@ -126,8 +132,10 @@ class InformativoController extends Controller
         return ['status' => false, 'message' => 'Post Not Found'];
     }
 
-    if ($request->hasFile('imagen')) {
-        $completeFileName = $request->file('imagen')->getClientOriginalName();
+    if ($request->hasFile('imagen') || $request->hasFile('pdf')) {
+
+if ($request->hasFile('imagen')) {
+$completeFileName = $request->file('imagen')->getClientOriginalName();
         $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
         $extension = $request->file('imagen')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
@@ -147,6 +155,30 @@ class InformativoController extends Controller
         $informativo->ruta_imagen = $this->urlAssets.'/'.$compPic;
         $informativo->autor = $autor;
         $informativo->destacado = $destacado;
+}
+
+if ($request->hasFile('pdf')) {
+$completeFileNamePdf = $request->file('pdf')->getClientOriginalName();
+        $fileNameOnlyPdf = pathinfo($completeFileNamePdf, PATHINFO_FILENAME);
+        $extensionPdf = $request->file('pdf')->getClientOriginalExtension();
+        $compPicPdf = str_replace('', '_', $fileNameOnlyPdf) . '-' . rand() . '_' . time() . '.' . $extensionPdf;
+         $path = $request->file('pdf')->move($this->urlAssetsProdPdf, $compPicPdf);
+ 
+            if ($informativo->pdf) {
+            $this->deleteFilePdf($informativo->pdf);
+        }
+
+        $informativo->titulo = $titulo;
+        $informativo->resumen = $resumen;
+        $informativo->descripcion = $descripcion;
+        $informativo->fuente = $fuente;
+        $informativo->pdf = $compPicPdf;
+        $informativo->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
+        $informativo->autor = $autor;
+        $informativo->destacado = $destacado;
+}
+
+        
     }else{
          $informativo->titulo = $titulo;
          $informativo->resumen = $resumen;
@@ -181,12 +213,43 @@ class InformativoController extends Controller
     }
 }
 
-public function destroyFile($id){
+public function deleteFilePdf($fileName)
+{
+    $filePath = $this->urlAssetsProdPdf . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
+
+    
+    if (file_exists($filePath)) {
+        
+        if (unlink($filePath)) {
+            return true; 
+            return false; 
+        }
+    } else {
+        return true; 
+    }
+}
+
+public function destroy($id){
+        $informativo=Informativo::find($id);
+        $this->deleteFile($informativo->imagen);
+        $this->deleteFilePdf($informativo->pdf);
+        $informativo->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+    }
+
+/* public function destroyFile($id){
         $informativo=Informativo::find($id);
         $this->deleteFile($informativo->imagen);
         $informativo->delete();
         return response()->json([
             'message'=>"Registro eliminado satisfactoriamente"
         ],Response::HTTP_OK);
-    }
+    } */
+
+
 }
+
+

@@ -13,5 +13,5 @@ class Informativo extends Model
 
     protected $primaryKey = 'id_informativo';
 
-     protected $fillable = ['titulo','resumen','descripcion','fuente','imagen','ruta_imagen','autor','destacado'];
+     protected $fillable = ['titulo','resumen','descripcion','fuente','imagen','ruta_imagen','pdf','ruta_pdf','autor','destacado'];
 }

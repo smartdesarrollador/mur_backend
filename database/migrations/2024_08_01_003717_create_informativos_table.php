@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string("fuente", 250)->nullable();
             $table->string("imagen", 250)->nullable();
             $table->string("ruta_imagen", 250)->nullable();
+            $table->string("pdf", 250)->nullable();
+            $table->string("ruta_pdf", 250)->nullable();
             $table->string("autor", 250)->nullable();
             $table->float("precio")->nullable();
             $table->string("destacado", 20)->nullable();

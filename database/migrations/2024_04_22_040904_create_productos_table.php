@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        /* 2.- CRUD-BASICO-V1-P1 */
         Schema::create('productos', function (Blueprint $table) {
             $table->id("id_producto");
             $table->string("nombre", 250)->nullable();
@@ -39,6 +40,7 @@ return new class extends Migration
             $table->float("store_id")->nullable(); */
             $table->timestamps();
         });
+        /* /2.- CRUD-BASICO-V1-P1 */
     }
 
     /**

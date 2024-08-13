@@ -5,8 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+/* 3.- CRUD-BASICO-V1-P1 */
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+/* /3.- CRUD-BASICO-V1-P1 */
 
 class ProductoSeeder extends Seeder
 {
@@ -15,6 +17,7 @@ class ProductoSeeder extends Seeder
      */
     public function run(): void
     {
+        /* 4.- CRUD-BASICO-V1-P1 */
         $horaActual = Carbon::now();
 
         $descripcion = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet. Sed faucibus lectus quam, a vulputate ligula ullamcorper ac. Sed nec odio a leo hendrerit varius. Mauris vel orci at ipsum ultricies laoreet. Sed eget lectus at lectus laoreet lobortis.</p><p>&nbsp;</p><p><strong>Lorem Ipsum Dolor Sit Amet</strong></p><p>&nbsp;</p><p><strong>Pre-requisitos:</strong></p><p>&nbsp;</p><ul><li>Conocimientos de manejo de datos y/o excel básico.</li><li>&nbsp;</li></ul><p><strong>Objetivo General:</strong></p><p>&nbsp;</p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Objetivos Específicos:</strong></p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Resumen del contenido:</strong></p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Please note:</strong></p><ul><li>I have replaced all specific text with generic Lorem ipsum text.</li><li>I have kept the headings and subheadings the same.</li><li>I have kept the bullet points and list structure the same.</li></ul><p>I hope this is helpful! Let me know if you have any other questions.</p>";
@@ -29,7 +32,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_1.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_1.jpg",
             'pdf' => "pdf_1.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_1.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_1.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -45,7 +48,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_2.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_2.jpg",
             'pdf' => "pdf_2.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_2.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_2.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -61,7 +64,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_3.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_3.jpg",
             'pdf' => "pdf_3.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_3.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_3.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -77,7 +80,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_4.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_4.jpg",
             'pdf' => "pdf_4.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_4.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_4.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -93,7 +96,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_5.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_5.jpg",
             'pdf' => "pdf_5.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_5.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_5.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -109,7 +112,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_6.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_6.jpg",
             'pdf' => "pdf_6.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_6.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_6.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -125,7 +128,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_7.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_7.jpg",
             'pdf' => "pdf_7.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_7.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_7.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -141,7 +144,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_8.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_8.jpg",
             'pdf' => "pdf_8.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_8.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_8.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -157,7 +160,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_9.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_9.jpg",
             'pdf' => "pdf_9.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_9.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_9.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -173,7 +176,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_10.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_10.jpg",
             'pdf' => "pdf_10.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_10.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_10.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -189,7 +192,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_11.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_11.jpg",
             'pdf' => "pdf_11.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_11.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_11.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -205,7 +208,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_12.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_12.jpg",
             'pdf' => "pdf_12.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_12.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_12.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -221,7 +224,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_13.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_13.jpg",
             'pdf' => "pdf_13.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_13.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_13.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -237,7 +240,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_14.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_14.jpg",
             'pdf' => "pdf_14.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_14.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_14.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -253,7 +256,7 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_15.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_15.jpg",
             'pdf' => "pdf_15.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_15.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_15.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -269,10 +272,11 @@ class ProductoSeeder extends Seeder
             'imagen' => "socio_16.jpg",
             'ruta_imagen' => "assets/imagen/producto/socio_16.jpg",
             'pdf' => "pdf_16.pdf",
-            'ruta_pdf' => "assets/pdfs/pdf_16.pdf",
+            'ruta_pdf' => "assets/pdfs/nuestro_equipo/pdf_16.pdf",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
+        /* /4.- CRUD-BASICO-V1-P1 */
     }
 }
