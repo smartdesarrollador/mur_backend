@@ -20,7 +20,9 @@ use App\Http\Controllers\Test\TestConsultasController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MisionController;
 use App\Http\Controllers\CarouselController;
+/* 12.- CRUD-BASICO-V1-P1 */
 use App\Http\Controllers\ProductoController;
+/* /12.- CRUD-BASICO-V1-P1 */
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TestimonioController;
 use App\Http\Controllers\BannerController;
@@ -108,9 +110,11 @@ Route::get('contactanos',function(){
 
 Route::post('enviar_correo',[ContactController::class,'sendContactForm']);
 
-
+/* 13.- CRUD-BASICO-V1-P1 */
 // Crud Productos
+/* 3.- LISTAR-S1 */
 Route::get('productos', [ProductoController::class, 'index']);
+/* /3.- LISTAR-S1 */
 Route::get('productos/cursos', [ProductoController::class, 'obtenerCursos']);
 Route::get('productos/especialidades', [ProductoController::class, 'obtenerEspecialidades']);
 Route::get('productos/destacados', [ProductoController::class, 'obtenerDestacados']);
@@ -120,6 +124,7 @@ Route::put('productos/{id}', [ProductoController::class, 'update']);
 Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
+/* /13.- CRUD-BASICO-V1-P1 */
 
 // Contacto
 Route::get('contactos', [ContactoController::class, 'index']);

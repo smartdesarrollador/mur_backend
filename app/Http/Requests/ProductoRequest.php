@@ -11,7 +11,10 @@ class ProductoRequest extends FormRequest
      */
     public function authorize(): bool
     {
+        /* 5.- CRUD-BASICO-V1-P1 */
+        // colocar en true
         return true;
+        /* /5.- CRUD-BASICO-V1-P1 */
     }
 
     /**
@@ -22,7 +25,9 @@ class ProductoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            /* 6.- CRUD-BASICO-V1-P1 */
+
+            /* /6.- CRUD-BASICO-V1-P1 */
         ];
     }
 }

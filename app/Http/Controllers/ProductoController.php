@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+/* 7.- CRUD-BASICO-V1-P1 */
 use App\Models\Producto;
 use App\Http\Requests\ProductoRequest;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+/* /7.- CRUD-BASICO-V1-P1 */
 
 class ProductoController extends Controller
 {
+    /* 8.- CRUD-BASICO-V1-P1 */
     private $urlAssets;
     private $urlAssetsProd;
 
@@ -20,11 +24,13 @@ class ProductoController extends Controller
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/producto'; */
     }
 
+    /* 2.- LISTAR-S1 */
    public function index()
     {
         $productos = Producto::all();
         return response()->json($productos, Response::HTTP_OK);
     }
+    /* /2.- LISTAR-S1 */
 
     public function obtenerCursos()
     {
@@ -213,4 +219,6 @@ public function destroyFile($id){
             'message'=>"Registro eliminado satisfactoriamente"
         ],Response::HTTP_OK);
     }
+
+    /* /8.- CRUD-BASICO-V1-P1 */
 }

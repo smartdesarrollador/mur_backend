@@ -4,6 +4,16 @@
 
 ## GITHUB: MUR_BACKEND (PARTE 1)
 
-![Crud basico](imagenes/crud_basico.png "Crud Basico")
+### SECCIONES
+
+-   1.- LISTAR-S1
 
 <!-- /1.- CRUD-BASICO-V1-P1-->
+
+<!-- 14.- CRUD-BASICO-V1-P1-->
+
+# imagenes postman
+
+https://docs.google.com/document/d/1RcIyrrz4IfHq6pmPGR0-2pYSyngzETXFE72ZGRNkluM/edit
+
+<!-- /14.- CRUD-BASICO-V1-P1-->
