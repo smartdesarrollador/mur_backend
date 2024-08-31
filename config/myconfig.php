@@ -14,4 +14,5 @@ return [
     'url_upload_sala' => env('URL_UPLOAD_SALA', 'assets/imagen/sala'),
     'url_upload_informativo' => env('URL_UPLOAD_INFORMATIVO', 'assets/imagen/informativo'),
 'url_upload_informativo_pdf' => env('URL_UPLOAD_INFORMATIVO_PDF', 'assets/pdfs/informativo'),
+'url_upload_producto_pdf' => env('URL_UPLOAD_PRODUCTO_PDF', 'assets/pdfs/producto'),
 ];

@@ -16,11 +16,15 @@ class ProductoController extends Controller
     /* 8.- CRUD-BASICO-V1-P1 */
     private $urlAssets;
     private $urlAssetsProd;
+    private $urlAssetsPdf;
+    private $urlAssetsProdPdf;
 
     public function __construct()
     {
         $this->urlAssets = 'assets/imagen/producto';
         $this->urlAssetsProd = config('myconfig.url_upload_producto');
+        $this->urlAssetsPdf = 'assets/pdfs/producto';
+        $this->urlAssetsProdPdf = config('myconfig.url_upload_producto_pdf');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/producto'; */
     }
 
@@ -88,21 +92,16 @@ class ProductoController extends Controller
         ],Response::HTTP_CREATED);
     }
 
-    public function destroy($id){
-        $id=Producto::find($id);
-        $id->delete();
-        return response()->json([
-            'message'=>"Registro eliminado satisfactoriamente"
-        ],Response::HTTP_OK);
-    }
+    
 
      public function file(Request $request)
     {
         $producto= new Producto();
 
-        if ($request->hasFile('imagen')) {
+        if ($request->hasFile('imagen') || $request->hasFile('pdf')) {
 
             $nombre = $request->input('nombre');
+            $cargo = $request->input('cargo');
             $resumen = $request->input('resumen');
             $descripcion = $request->input('descripcion');
             $correo = $request->input('correo');
@@ -118,7 +117,14 @@ class ProductoController extends Controller
            $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
            //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
+           $completeFileNamePdf = $request->file('pdf')->getClientOriginalName();
+            $fileNameOnlyPdf = pathinfo($completeFileNamePdf, PATHINFO_FILENAME);
+            $extenshionPdf = $request->file('pdf')->getClientOriginalExtension();
+            $compPicPdf = str_replace('', '_', $fileNameOnlyPdf) . '-' . rand() . '_' . time() . '.' . $extenshionPdf;
+           $path = $request->file('pdf')->move($this->urlAssetsProdPdf, $compPicPdf);
+
             $producto->nombre = $nombre;
+            $producto->cargo = $cargo;
             $producto->resumen = $resumen;
             $producto->descripcion = $descripcion;
             $producto->correo = $correo;
@@ -127,6 +133,8 @@ class ProductoController extends Controller
             $producto->ruta_imagen = $this->urlAssets.'/'.$compPic; 
             /* $producto->maestro = $maestro; */
             $producto->categoria_producto_id = $categoria_producto_id;
+            $producto->pdf = $compPicPdf;
+            $producto->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
         }
         if ($producto->save()) {
             return ['status' => true, 'message' => 'Datos guardados con exito'];
@@ -139,6 +147,7 @@ class ProductoController extends Controller
 {
     $id = $request->input('id_producto');
     $nombre = $request->input('nombre');
+    $cargo = $request->input('cargo');
     $resumen = $request->input('resumen');
     $descripcion = $request->input('descripcion');
     $correo = $request->input('correo');
@@ -152,8 +161,10 @@ class ProductoController extends Controller
         return ['status' => false, 'message' => 'Post Not Found'];
     }
 
-    if ($request->hasFile('imagen')) {
-        $completeFileName = $request->file('imagen')->getClientOriginalName();
+    if ($request->hasFile('imagen') || $request->hasFile('pdf')) {
+
+        if ($request->hasFile('imagen')) {
+            $completeFileName = $request->file('imagen')->getClientOriginalName();
         $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
         $extension = $request->file('imagen')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
@@ -166,6 +177,7 @@ class ProductoController extends Controller
         }
 
         $producto->nombre = $nombre;
+        $producto->cargo = $cargo;
         $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
         $producto->correo = $correo;
@@ -174,9 +186,35 @@ class ProductoController extends Controller
         $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
         /* $producto->maestro = $maestro; */
         $producto->categoria_producto_id = $categoria_producto_id;
+        }
+
+        if ($request->hasFile('pdf')) {
+            $completeFileNamePdf = $request->file('pdf')->getClientOriginalName();
+        $fileNameOnlyPdf = pathinfo($completeFileNamePdf, PATHINFO_FILENAME);
+        $extensionPdf = $request->file('pdf')->getClientOriginalExtension();
+        $compPicPdf = str_replace('', '_', $fileNameOnlyPdf) . '-' . rand() . '_' . time() . '.' . $extensionPdf;
+         $path = $request->file('pdf')->move($this->urlAssetsProdPdf, $compPicPdf);
+ 
+            if ($producto->pdf) {
+            $this->deleteFilePdf($producto->pdf);
+        }
+
+        $producto->nombre = $nombre;
+        $producto->cargo = $cargo;
+        $producto->resumen = $resumen;
+        $producto->descripcion = $descripcion;
+        $producto->correo = $correo;
+        $producto->telefono = $telefono;
+        $producto->pdf = $compPicPdf;
+        $producto->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
+        /* $producto->maestro = $maestro; */
+        $producto->categoria_producto_id = $categoria_producto_id;
+        }
+        
 
     }else{
          $producto->nombre = $nombre;
+         $producto->cargo = $cargo;
          $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
         $producto->correo = $correo;
@@ -211,7 +249,32 @@ class ProductoController extends Controller
     }
 }
 
-public function destroyFile($id){
+public function deleteFilePdf($fileName)
+{
+    $filePath = $this->urlAssetsProdPdf . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
+
+    
+    if (file_exists($filePath)) {
+        
+        if (unlink($filePath)) {
+            return true; 
+            return false; 
+        }
+    } else {
+        return true; 
+    }
+}
+
+/* public function destroy($id){
+        $id=Producto::find($id);
+        $id->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+    } */
+
+public function destroy($id){
         $producto=Producto::find($id);
         $this->deleteFile($producto->imagen);
         $producto->delete();
