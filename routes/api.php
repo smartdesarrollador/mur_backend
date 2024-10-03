@@ -29,6 +29,19 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\SalaController;
 use App\Http\Controllers\InformativoController;
+use App\Http\Controllers\SliderReconocimientoController;
+use App\Http\Controllers\SliderComentarioController;
+use App\Http\Controllers\SliderMiembroController;
+use App\Http\Controllers\BannerPublicacionController;
+use App\Http\Controllers\BannerFirmaController;
+use App\Http\Controllers\BannerAreaController;
+use App\Http\Controllers\BannerEquipoController;
+
+
+
+
+
+
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -177,4 +190,68 @@ Route::put('informativos/{id}', [InformativoController::class, 'update']);
 Route::delete('informativos/{id}', [InformativoController::class, 'destroy']);
 Route::post('informativos/subir', [InformativoController::class, 'file']);
 Route::post('informativos/update', [InformativoController::class, 'updateFile']);
+
+// Crud Slider Reconocimiento
+Route::get('slider/reconocimiento', [SliderReconocimientoController::class, 'index']);
+Route::post('slider/reconocimiento', [SliderReconocimientoController::class, 'store']);
+Route::get('slider/reconocimiento/{id}', [SliderReconocimientoController::class, 'show']);
+Route::put('slider/reconocimiento/{id}', [SliderReconocimientoController::class, 'update']);
+Route::delete('slider/reconocimiento/{id}', [SliderReconocimientoController::class, 'destroy']);
+Route::post('slider/reconocimiento/subir', [SliderReconocimientoController::class, 'file']);
+Route::post('slider/reconocimiento/update', [SliderReconocimientoController::class, 'updateFile']);    
+
+// Crud Slider Comentario
+Route::get('slider/comentario', [SliderComentarioController::class, 'index']);
+Route::post('slider/comentario', [SliderComentarioController::class, 'store']);
+Route::get('slider/comentario/{id}', [SliderComentarioController::class, 'show']);
+Route::put('slider/comentario/{id}', [SliderComentarioController::class, 'update']);
+Route::delete('slider/comentario/{id}', [SliderComentarioController::class, 'destroy']);
+Route::post('slider/comentario/subir', [SliderComentarioController::class, 'file']);
+Route::post('slider/comentario/update', [SliderComentarioController::class, 'updateFile']);    
+
+// Crud Slider Miembro
+Route::get('slider/miembro', [SliderMiembroController::class, 'index']);
+Route::post('slider/miembro', [SliderMiembroController::class, 'store']);
+Route::get('slider/miembro/{id}', [SliderMiembroController::class, 'show']);
+Route::put('slider/miembro/{id}', [SliderMiembroController::class, 'update']);
+Route::delete('slider/miembro/{id}', [SliderMiembroController::class, 'destroy']);
+Route::post('slider/miembro/subir', [SliderMiembroController::class, 'file']);
+Route::post('slider/miembro/update', [SliderMiembroController::class, 'updateFile']);      
+
+// Crud Banner Publicacion
+Route::get('banner/publicacion', [BannerPublicacionController::class, 'index']);
+Route::post('banner/publicacion', [BannerPublicacionController::class, 'store']);
+Route::get('banner/publicacion/{id}', [BannerPublicacionController::class, 'show']);
+Route::put('banner/publicacion/{id}', [BannerPublicacionController::class, 'update']);
+Route::delete('banner/publicacion/{id}', [BannerPublicacionController::class, 'destroy']);
+Route::post('banner/publicacion/subir', [BannerPublicacionController::class, 'file']);
+Route::post('banner/publicacion/update', [BannerPublicacionController::class, 'updateFile']);                        
+
+// Crud Banner Firma
+Route::get('banner/firma', [BannerFirmaController::class, 'index']);
+Route::post('banner/firma', [BannerFirmaController::class, 'store']);
+Route::get('banner/firma/{id}', [BannerFirmaController::class, 'show']);
+Route::put('banner/firma/{id}', [BannerFirmaController::class, 'update']);
+Route::delete('banner/firma/{id}', [BannerFirmaController::class, 'destroy']);
+Route::post('banner/firma/subir', [BannerFirmaController::class, 'file']);
+Route::post('banner/firma/update', [BannerFirmaController::class, 'updateFile']);                                                  
+
+// Crud Banner Area
+Route::get('banner/area', [BannerAreaController::class, 'index']);
+Route::post('banner/area', [BannerAreaController::class, 'store']);
+Route::get('banner/area/{id}', [BannerAreaController::class, 'show']);
+Route::put('banner/area/{id}', [BannerAreaController::class, 'update']);
+Route::delete('banner/area/{id}', [BannerAreaController::class, 'destroy']);
+Route::post('banner/area/subir', [BannerAreaController::class, 'file']);
+Route::post('banner/area/update', [BannerAreaController::class, 'updateFile']);    
+
+// Crud Banner Equipo
+Route::get('banner/equipo', [BannerEquipoController::class, 'index']);
+Route::post('banner/equipo', [BannerEquipoController::class, 'store']);
+Route::get('banner/equipo/{id}', [BannerEquipoController::class, 'show']);
+Route::put('banner/equipo/{id}', [BannerEquipoController::class, 'update']);
+Route::delete('banner/equipo/{id}', [BannerEquipoController::class, 'destroy']);
+Route::post('banner/equipo/subir', [BannerEquipoController::class, 'file']);
+
+
 

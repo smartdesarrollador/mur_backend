@@ -15,4 +15,11 @@ return [
     'url_upload_informativo' => env('URL_UPLOAD_INFORMATIVO', 'assets/imagen/informativo'),
 'url_upload_informativo_pdf' => env('URL_UPLOAD_INFORMATIVO_PDF', 'assets/pdfs/informativo'),
 'url_upload_producto_pdf' => env('URL_UPLOAD_PRODUCTO_PDF', 'assets/pdfs/producto'),
+'url_upload_banner_publicacion' => env('URL_UPLOAD_BANNER_PUBLICACION', 'assets/imagen/banner/publicacion'),
+'url_upload_banner_firma' => env('URL_UPLOAD_BANNER_FIRMA', 'assets/imagen/banner/firma'),
+'url_upload_banner_area' => env('URL_UPLOAD_BANNER_AREA', 'assets/imagen/banner/area'),
+'url_upload_banner_equipo' => env('URL_UPLOAD_BANNER_EQUIPO', 'assets/imagen/banner/equipo'),
+'url_upload_slider_reconocimiento' => env('URL_UPLOAD_SLIDER_RECONOCIMIENTO', 'assets/imagen/slider/reconocimiento'),
+'url_upload_slider_comentario' => env('URL_UPLOAD_SLIDER_COMENTARIO', 'assets/imagen/slider/comentario'),
+'url_upload_slider_miembro' => env('URL_UPLOAD_SLIDER_MIEMBRO', 'assets/imagen/slider/miembro'),
 ];

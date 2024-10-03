@@ -62,16 +62,7 @@ class SliderSeeder extends Seeder
 
         ]);
 
-        /* DB::table('sliders')->insert([
-            'id_slider' => 5,
-            'titulo' => "Kateleen Urbina",
-            'descripcion' => "",
-            'imagen' => "foto_5.jpg",
-            'ruta_imagen' => "assets/imagen/carousel/foto_5.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]); */
+        
 
         DB::table('sliders')->insert([
             'id_slider' => 6,
@@ -150,38 +141,7 @@ class SliderSeeder extends Seeder
 
         ]);
 
-        /* DB::table('sliders')->insert([
-            'id_slider' => 13,
-            'titulo' => "Johan Serrano",
-            'descripcion' => "",
-            'imagen' => "foto_13.jpg",
-            'ruta_imagen' => "assets/imagen/carousel/foto_13.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]); */
-
-       /*  DB::table('sliders')->insert([
-            'id_slider' => 14,
-            'titulo' => "José Raunelli",
-            'descripcion' => "",
-            'imagen' => "foto_14.jpg",
-            'ruta_imagen' => "assets/imagen/carousel/foto_14.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]); */
-
-        /* DB::table('sliders')->insert([
-            'id_slider' => 15,
-            'titulo' => "Ximena Márquez",
-            'descripcion' => "",
-            'imagen' => "foto_15.jpg",
-            'ruta_imagen' => "assets/imagen/carousel/foto_15.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]); */
+        
 
         DB::table('sliders')->insert([
             'id_slider' => 16,

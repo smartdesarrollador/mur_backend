@@ -61,6 +61,13 @@ class DatabaseSeeder extends Seeder
             SliderSeeder::class,
             SalasSeeder::class,
             InformativoSeeder::class,
+            BannerAreaSeeder::class,
+            BannerEquipoSeeder::class,
+            BannerFirmaSeeder::class,
+            BannerPublicacionSeeder::class,
+            SliderMiembroSeeder::class,
+            SliderReconocimientoSeeder::class,
+            SliderComentarioSeeder::class,
         ]);
     }
 }
