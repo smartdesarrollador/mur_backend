@@ -23,7 +23,7 @@ class SliderReconocimientoSeeder extends Seeder
             'titulo' => "Ximena Samamé",
             'descripcion' => "",
             'imagen' => "foto_1.jpg",
-            'ruta_imagen' => "assets/imagen/slider_reconocimiento/foto_1.jpg",
+            'ruta_imagen' => "assets/imagen/slider/reconocimiento/foto_1.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
@@ -34,7 +34,7 @@ class SliderReconocimientoSeeder extends Seeder
             'titulo' => "Patricia Kcomt",
             'descripcion' => "",
             'imagen' => "foto_2.jpg",
-            'ruta_imagen' => "assets/imagen/slider_reconocimiento/foto_2.jpg",
+            'ruta_imagen' => "assets/imagen/slider/reconocimiento/foto_2.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
@@ -45,7 +45,7 @@ class SliderReconocimientoSeeder extends Seeder
             'titulo' => "Luis Cabrera",
             'descripcion' => "",
             'imagen' => "foto_3.jpg",
-            'ruta_imagen' => "assets/imagen/slider_reconocimiento/foto_3.jpg",
+            'ruta_imagen' => "assets/imagen/slider/reconocimiento/foto_3.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 

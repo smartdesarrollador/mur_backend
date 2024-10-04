@@ -19,7 +19,7 @@ class BannerFirmaSeeder extends Seeder
         DB::table('banner_firma')->insert([
             'id_banner_firma' => 1,
             'imagen' => "banner_1.jpg",
-            'ruta_imagen' => "assets/imagen/banner_firma/banner_1.jpg",
+            'ruta_imagen' => "assets/imagen/banner/firma/banner_1.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);

@@ -19,7 +19,7 @@ class BannerAreaSeeder extends Seeder
         DB::table('banner_area')->insert([
             'id_banner_area' => 1,
             'imagen' => "banner_1.jpg",
-            'ruta_imagen' => "assets/imagen/banner_area/banner_1.jpg",
+            'ruta_imagen' => "assets/imagen/banner/area/banner_1.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);

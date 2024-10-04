@@ -15,7 +15,7 @@ class SliderMiembroController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = 'assets/imagen/slider_miembro';
+        $this->urlAssets = 'assets/imagen/slider/miembro';
         $this->urlAssetsProd = config('myconfig.url_upload_slider_miembro');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/testimonio'; */
     }

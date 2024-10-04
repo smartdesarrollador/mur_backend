@@ -15,7 +15,7 @@ class SliderComentarioController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = 'assets/imagen/slider_comentario';
+        $this->urlAssets = 'assets/imagen/slider/comentario';
         $this->urlAssetsProd = config('myconfig.url_upload_slider_comentario');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/testimonio'; */
     }

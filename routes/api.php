@@ -252,6 +252,7 @@ Route::get('banner/equipo/{id}', [BannerEquipoController::class, 'show']);
 Route::put('banner/equipo/{id}', [BannerEquipoController::class, 'update']);
 Route::delete('banner/equipo/{id}', [BannerEquipoController::class, 'destroy']);
 Route::post('banner/equipo/subir', [BannerEquipoController::class, 'file']);
+Route::post('banner/equipo/update', [BannerEquipoController::class, 'updateFile']);
 
 
 

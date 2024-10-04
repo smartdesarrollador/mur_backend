@@ -23,7 +23,7 @@ class SliderMiembroSeeder extends Seeder
             'titulo' => "Ximena Samamé",
             'descripcion' => "",
             'imagen' => "foto_1.jpg",
-            'ruta_imagen' => "assets/imagen/slider_miembro/foto_1.jpg",
+            'ruta_imagen' => "assets/imagen/slider/miembro/foto_1.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
@@ -34,7 +34,7 @@ class SliderMiembroSeeder extends Seeder
             'titulo' => "Patricia Kcomt",
             'descripcion' => "",
             'imagen' => "foto_2.jpg",
-            'ruta_imagen' => "assets/imagen/slider_miembro/foto_2.jpg",
+            'ruta_imagen' => "assets/imagen/slider/miembro/foto_2.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 
@@ -45,7 +45,7 @@ class SliderMiembroSeeder extends Seeder
             'titulo' => "Luis Cabrera",
             'descripcion' => "",
             'imagen' => "foto_3.jpg",
-            'ruta_imagen' => "assets/imagen/slider_miembro/foto_3.jpg",
+            'ruta_imagen' => "assets/imagen/slider/miembro/foto_3.jpg",
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
 

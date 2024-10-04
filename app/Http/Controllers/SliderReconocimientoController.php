@@ -15,7 +15,7 @@ class SliderReconocimientoController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = 'assets/imagen/slider_reconocimiento';
+        $this->urlAssets = 'assets/imagen/slider/reconocimiento';
         $this->urlAssetsProd = config('myconfig.url_upload_slider_reconocimiento');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/testimonio'; */
     }
