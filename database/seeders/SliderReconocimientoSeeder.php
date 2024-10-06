@@ -40,15 +40,6 @@ class SliderReconocimientoSeeder extends Seeder
 
         ]);
 
-        DB::table('slider_reconocimiento')->insert([
-            'id_slider_reconocimiento' => 3,
-            'titulo' => "Luis Cabrera",
-            'descripcion' => "",
-            'imagen' => "foto_3.jpg",
-            'ruta_imagen' => "assets/imagen/slider/reconocimiento/foto_3.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]);
+        
     }
 }

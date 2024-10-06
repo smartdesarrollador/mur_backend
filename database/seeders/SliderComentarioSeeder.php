@@ -50,5 +50,16 @@ class SliderComentarioSeeder extends Seeder
             'updated_at' => $horaActual,
 
         ]);
+
+        DB::table('slider_comentario')->insert([
+            'id_slider_comentario' => 4,
+            'titulo' => "Luis Cabrera",
+            'descripcion' => "",
+            'imagen' => "foto_4.jpg",
+            'ruta_imagen' => "assets/imagen/slider/comentario/foto_4.jpg",
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
+
+        ]);
     }
 }

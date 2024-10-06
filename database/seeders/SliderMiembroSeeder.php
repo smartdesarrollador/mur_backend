@@ -40,15 +40,6 @@ class SliderMiembroSeeder extends Seeder
 
         ]);
 
-        DB::table('slider_miembro')->insert([
-            'id_slider_miembro' => 3,
-            'titulo' => "Luis Cabrera",
-            'descripcion' => "",
-            'imagen' => "foto_3.jpg",
-            'ruta_imagen' => "assets/imagen/slider/miembro/foto_3.jpg",
-            'created_at' => $horaActual,
-            'updated_at' => $horaActual,
-
-        ]);
+       
     }
 }
