@@ -103,9 +103,8 @@ Route::delete('carousel/update/upload/{id}', [CarouselController::class, 'destro
 /* Crud Mision */
 
 Route::get('mision', [MisionController::class, 'index']);
-
+Route::get('mision/{id}', [MisionController::class, 'show']);
 Route::put('mision/actualizar/{id}', [MisionController::class, 'update']);
-
 Route::post('mision/update/upload', [MisionController::class, 'updateFile']);
 
 /* 11.- LOGIN_REGISTER_BASICO-V1-P1 */

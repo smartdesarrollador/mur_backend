@@ -24,13 +24,13 @@ class MisionController extends Controller
     }
 
     public function index(){
-        $categories=Mision::find(1);
+        $categories=Mision::all();
         return response()->json($categories,Response::HTTP_OK);
     }
 
     public function update(Request $request,$category){
         $category=Mision::find($category);
-        $category->update($request->only('imagen_mision','titulo_mision'));
+        $category->update($request->only('titulo_mision','contenido_mision'));
         return response()->json([
             'message'=>"Registro actualizado satisfactoriamente",
             'category'=>$category
@@ -99,4 +99,12 @@ class MisionController extends Controller
         return true; 
     }
 }
+
+    public function show($id){
+        $mision = Mision::find($id);
+        if (!$mision) {
+            return response()->json(['message' => 'Misión no encontrada'], Response::HTTP_NOT_FOUND);
+        }
+        return response()->json($mision, Response::HTTP_OK);
+    }
 }
