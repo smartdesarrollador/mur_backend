@@ -22,4 +22,5 @@ return [
 'url_upload_slider_reconocimiento' => env('URL_UPLOAD_SLIDER_RECONOCIMIENTO', 'assets/imagen/slider/reconocimiento'),
 'url_upload_slider_comentario' => env('URL_UPLOAD_SLIDER_COMENTARIO', 'assets/imagen/slider/comentario'),
 'url_upload_slider_miembro' => env('URL_UPLOAD_SLIDER_MIEMBRO', 'assets/imagen/slider/miembro'),
+'url_upload_industrias' => env('URL_UPLOAD_INDUSTRIAS', 'assets/imagen/industrias'),
 ];

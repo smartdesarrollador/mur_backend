@@ -36,7 +36,7 @@ use App\Http\Controllers\BannerPublicacionController;
 use App\Http\Controllers\BannerFirmaController;
 use App\Http\Controllers\BannerAreaController;
 use App\Http\Controllers\BannerEquipoController;
-
+use App\Http\Controllers\IndustriaController;
 
 
 
@@ -252,6 +252,15 @@ Route::put('banner/equipo/{id}', [BannerEquipoController::class, 'update']);
 Route::delete('banner/equipo/{id}', [BannerEquipoController::class, 'destroy']);
 Route::post('banner/equipo/subir', [BannerEquipoController::class, 'file']);
 Route::post('banner/equipo/update', [BannerEquipoController::class, 'updateFile']);
+
+// Crud Slider Reconocimiento
+Route::get('industrias', [IndustriaController::class, 'index']);
+Route::post('industrias', [IndustriaController::class, 'store']);
+Route::get('industrias/{id}', [IndustriaController::class, 'show']);
+Route::put('industrias/{id}', [IndustriaController::class, 'update']);
+Route::delete('industrias/{id}', [IndustriaController::class, 'destroy']);
+Route::post('industrias/subir', [IndustriaController::class, 'file']);
+Route::post('industrias/update', [IndustriaController::class, 'updateFile']); 
 
 
 
