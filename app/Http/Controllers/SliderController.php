@@ -71,6 +71,7 @@ class SliderController extends Controller
         if ($request->hasFile('imagen')) {
 
             $titulo = $request->input('titulo');
+            $cargo = $request->input('cargo');
             $descripcion = $request->input('descripcion');
             
             $completeFileName = $request->file('imagen')->getClientOriginalName();
@@ -81,6 +82,7 @@ class SliderController extends Controller
            //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
             $slider->titulo = $titulo;
+            $slider->cargo = $cargo;
             $slider->descripcion = $descripcion;
             $slider->imagen = $compPic;
             $slider->ruta_imagen = $this->urlAssets.'/'.$compPic; 
@@ -97,6 +99,7 @@ class SliderController extends Controller
 {
     $id = $request->input('id_slider');
     $titulo = $request->input('titulo');
+    $cargo = $request->input('cargo');
     $descripcion = $request->input('descripcion');
 
     $slider = Slider::find($id);
@@ -119,6 +122,7 @@ class SliderController extends Controller
         }
 
         $slider->titulo = $titulo;
+        $slider->cargo = $cargo;
         $slider->descripcion = $descripcion;
         $slider->imagen = $compPic;
         $slider->ruta_imagen = $this->urlAssets.'/'.$compPic;
@@ -126,6 +130,7 @@ class SliderController extends Controller
 
     }else{
          $slider->titulo = $titulo;
+        $slider->cargo = $cargo;
         $slider->descripcion = $descripcion;
     }
 
